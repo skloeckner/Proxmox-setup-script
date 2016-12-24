@@ -9,8 +9,8 @@ zfs create rpool/KVMStor
 zfs create rpool/LXCStor
 zfs create rpool/KVMStor/data
 
-# Symbolic link to qemu config file proxmox uses on dataset to be synced to another server(In case of catastrophe)
-ln -s /etc/pve/qemu-server /rpool/data
+# Rsync data to dataset to be replicated
+/usr/bin/rsync -r /etc/pve/qemu-server /rpool/KVMStor/data > /dev/null
 
 # Install pre-reqs of zfs snapshot management tools and overall updates
 apt-get update && apt-get upgrade -y
