@@ -21,6 +21,9 @@ apt-get install git libconfig-inifiles-perl sudo lzop mbuffer pv -y
 git clone https://github.com/jimsalterjrs/sanoid
 cp ./sanoid/sanoid /usr/local/bin/
 cp ./sanoid/syncoid /usr/local/bin/
+mkdir /etc/sanoid
+cp ./sanoid/sanoid.conf /etc/sanoid
+cp ./sanoid/sanoid.defaults.conf /etc/sanoid
 
 # Create secondary backup pool in order to replicate datasets to/from
 zpool create -f -o ashift=12 backuppool mirror /dev/sdc /dev/sdd
