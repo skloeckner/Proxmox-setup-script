@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # PVE No subscription
-echo "deb http://download.proxmox.com/debian jessie pve-no-subscription" > /etc/apt/sources.list.d/pve-no-subscription.list
+echo "deb http://download.proxmox.com/debian stretch pve-no-subscription" > /etc/apt/sources.list.d/pve-no-subscription.list
 echo "" > /etc/apt/sources.list.d/pve-enterprise.list
 
 # Setup preferred zfs dataset names
